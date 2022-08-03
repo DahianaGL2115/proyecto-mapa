@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <B> <h1 ><FONT COLOR="teal">UBICANDO</FONT> </h1></B>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">    
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> <B><h2><FONT COLOR="teal"> INGRESE DATOS DE UBICACIÓN</FONT> </h2></B></ion-card-title>
+        <div class="sombra"></div>
+        </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Descripcion del lugar</ion-label>
+            <ion-input #title></ion-input>
+          </ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-item>
+                  <ion-label position="floating">Latitud</ion-label>
+                  <ion-input #lat></ion-input>
+                </ion-item>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-item>
+                    <ion-label position="floating">Longitud</ion-label>
+                    <ion-input #lng></ion-input>
+                  </ion-item>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+        <div class="ion-padding">
+          <ion-button expand="block" (click)="sendMarker(title.value, lat.value, lng.value)">Ir</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
